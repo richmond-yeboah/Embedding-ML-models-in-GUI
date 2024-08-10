@@ -10,4 +10,4 @@ def load_data():
     df = pd.read_csv('https://github.com/richmond-yeboah/Customer-Churn-Prediction/raw/main/Data/Telco.csv')
     return df
 
-df = load_data().head(100)
+st.dataframe(load_data())
