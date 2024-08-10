@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Customer Churn Prediction")
+st.title("Customer Churn Prediction App")
 
 st.write("This is some content displayed on the page.")
 # Add more Streamlit elements like charts, data visualizations, etc.
