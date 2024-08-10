@@ -8,5 +8,7 @@ st.set_page_config(
 
 st.title("Customer Churn Prediction App")
 
-st.write("This is some content displayed on the page.")
+st.markdown("""
+            This app uses machine learning to predict whether a telco customer will churn or not
+            """)
 # Add more Streamlit elements like charts, data visualizations, etc.
