@@ -4,7 +4,8 @@ def main():
     st.set_page_config(
         page_title="Telco Customer Churn Prediction",
         page_icon="🔮",
-        layout="wide"
+        layout="wide",
+        initial_sidebar_state='auto'
     )
 
     st.title("Telco Customer Churn Prediction App")
@@ -16,26 +17,57 @@ def main():
         Using machine learning, we aim to predict which customers are likely to leave based on various factors.
         """)
 
-    # Project Description
-    st.write("""
-    ### Project Overview
-    Customer churn is a significant issue in the telecom industry, where companies lose a portion of their customers to competitors. 
-    In this app, we use a dataset from a telecom company to build a predictive model that identifies customers who are at risk of churning.""")
+    cols = st.columns(2)
+        # Churn Prediction Status
+    with cols[0]:
+        st.subheader('Churn Prediction Status')
+        st.write("This application provides a platform for predicting the churn status of customers by leveraging historical data encompassing customer demographics, subscription details, account information, and their corresponding churn status.")
 
-    # Navigation buttons (optional)
-    st.write("### Explore the App")
+        # Application Features
+    with cols[0]:
+        st.subheader('Application Features')
+        st.markdown("""                
+            * Data - View proprietory data
+            * Dashboard - Shows EDA and KPIs with other analytical questions
+            * Prediction - Allows user to predict churn status from two available models
+            * History - Displays all previous predictions made using the app
+            """)
 
-    if st.button("🏠home"):
-        st.write("Navigate to home page")
+    # Key Advantages
+    with cols[0]:
+        st.subheader('Key Advantages')
+        st.markdown("""
+                    Discover the advantages of using this Churn Prediction App, such as;
+                    * Accurate predictions
+                    * User-friendly interface
+                    """)
 
-    if st.button("💾data"):
-        st.write("Navigate to data page")
+    # How to run the app
+    with cols[1]:
+        st.subheader('How to Run the App')
+        st.write("Follow the steps to run the Customer Churn Prediction App and make accurate predictions for customer churn.")
+        st.code("""
+                    #activate virtual environment
+                    venv/Scripts/activate
 
-    if st.button("📜history"):
-        st.write("Navigate to history page")
+                    streamlit run 🏠home.py
+                    """, language="python")
 
-    if st.button("🔮prediction"):
-        st.write("Navigate to prediction page")
+        # Machine Learning Integration
+    with cols[1]:
+        st.subheader('Machine Learning Integration')
+        st.write("Learn about the machine learning models integrated into the app, including Gradient Boosting and Support Vector models.")
+
+        # Need Assistance
+    with cols[1]:
+        st.subheader('Need Assistance?')
+        st.write("If you need any assistance or have questions, feel free to reach out. Email: richmondyeboah299@gmail.com")
+        cols = st.columns(4)
+
+        with cols[0]:
+            st.link_button(":red[GitHub]", "https://github.com/richmond-yeboah/Embedding-ML-models-in-GUI")
+        with cols[2]:
+            st.link_button(":red[LinkedIn]", "https://www.linkedin.com/in/richmond-yeboah-")
 
 
     # Footer
