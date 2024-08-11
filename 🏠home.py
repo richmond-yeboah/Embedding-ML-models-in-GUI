@@ -60,8 +60,8 @@ def main():
 
         # Need Assistance
     with cols[1]:
-        st.subheader('Need Assistance?')
-        st.write("If you need any assistance or have questions, feel free to reach out. Email: richmondyeboah299@gmail.com")
+        st.subheader('Contact Information')
+        st.write("Feel free to reach out. Email: richmondyeboah299@gmail.com")
         cols = st.columns(4)
 
         with cols[0]:
