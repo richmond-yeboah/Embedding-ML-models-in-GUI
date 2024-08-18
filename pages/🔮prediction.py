@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import requests
+from sklearn.base import BaseEstimator, TransformerMixin
 import os
 from io import StringIO
 from io import BytesIO
@@ -58,6 +59,33 @@ def select_model(key):
         return encoder
     
     return pipeline, encoder
+
+
+# Custom function to deal with cleaning the total charges column
+class TotalCharges_cleaner(BaseEstimator, TransformerMixin):
+    def fit(self, X, y=None):
+        return self
+            
+    def transform(self, X):
+        # Replace empty string with NA
+        X['TotalCharges'].replace(' ', np.nan, inplace=True)
+
+        # Convert the values in the Totalcharges column to a float
+        X['TotalCharges'] = X['TotalCharges'].transform(lambda x: float(x))
+        return X
+            
+        # Serialization methods
+    def __getstate__(self):
+        # Return state to be serialized
+        return {}
+
+    def __setstate__(self, state):
+        # Restore state from serialized data
+        pass
+            
+        # Since this transformer doesn't remove or alter features, return the input features
+    def get_feature_names_out(self, input_features=None):
+        return input_features
     
     
     
