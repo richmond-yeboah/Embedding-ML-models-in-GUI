@@ -23,9 +23,9 @@ with column1:
 
 # Load trained machine learning model and encoder from GitHub
 # Load trained machine learning model and encoder from GitHub
-    github_model1_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/GradientBoosting.joblib'
-    github_model2_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/SupportVector.joblib'
-    encoder_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/label_encoder.joblib'
+    github_model1_url = 'https://raw.githubusercontent.com/richmond-yeboah/Telecom-Customer-Churn-Prediction/main/model/GradientBoosting.joblib'
+    github_model2_url = 'https://raw.githubusercontent.com/richmond-yeboah/Telecom-Customer-Churn-Prediction/main/model/SupportVector.joblib'
+    encoder_url = 'https://raw.githubusercontent.com/richmond-yeboah/Telecom-Customer-Churn-Prediction/main/model/label_encoder.joblib'
 
 # -------- Function to load the model from GitHub
 @st.cache_resource(show_spinner="Loading model")
