@@ -65,6 +65,51 @@ def select_model():
     encoder = load_encoder()
     return model, encoder
 
+ # Custom function to deal with cleaning the total charges column
+class TotalCharges_cleaner(BaseEstimator, TransformerMixin):
+    def fit(self, X, y=None):
+        return self
+            
+    def transform(self, X):
+            # Replace empty string with NA
+        X['TotalCharges'].replace(' ', np.nan, inplace=True)
+
+            # Convert the values in the Totalcharges column to a float
+        X['TotalCharges'] = X['TotalCharges'].transform(lambda x: float(x))
+            return X
+            
+        # Serialization methods
+    def __getstate__(self):
+            # Return state to be serialized
+        return {}
+
+    def __setstate__(self, state):
+            # Restore state from serialized data
+        pass
+            
+        # Since this transformer doesn't remove or alter features, return the input features
+    def get_feature_names_out(self, input_features=None):
+        return input_features
+
+
+    # Create a class to deal with dropping Customer ID from the dataset
+class columnDropper(BaseEstimator, TransformerMixin):
+    def fit(self, X, y=None):
+        return self
+            
+    def transform(self, X):
+            # Drop the specified column
+        return X.drop('customerID', axis=1)
+            
+    def get_feature_names_out(self, input_features=None):
+            # If input_features is None or not provided, return None
+        if input_features is None:
+            return None
+            # Return feature names after dropping the specified column
+        return [feature for feature in input_features if feature != 'customerID']
+
+
+
     # ---- Initialize prediction in session state
 if 'prediction' not in st.session_state:
     st.session_state['prediction'] = None
