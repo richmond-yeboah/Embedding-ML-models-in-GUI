@@ -22,9 +22,10 @@ with column1:
     model_option = st.selectbox('Choose which model to use for prediction', options=['Gradient Boosting', 'Support Vector'])
 
 # Load trained machine learning model and encoder from GitHub
-github_model1_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/GradientBoosting.joblib'
-github_model2_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/SupportVector.joblib'
-encoder_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/label_encoder.joblib'
+# Load trained machine learning model and encoder from GitHub
+    github_model1_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/GradientBoosting.joblib'
+    github_model2_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/SupportVector.joblib'
+    encoder_url = 'https://raw.githubusercontent.com/pk-aduyaw/Customer_Churn_Classification_Project/master/model/label_encoder.joblib'
 
 # -------- Function to load the model from GitHub
 @st.cache_resource(show_spinner="Loading model")
