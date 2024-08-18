@@ -87,6 +87,23 @@ class TotalCharges_cleaner(BaseEstimator, TransformerMixin):
     def get_feature_names_out(self, input_features=None):
         return input_features
     
+
+ # Create a class to deal with dropping Customer ID from the dataset
+    class columnDropper(BaseEstimator, TransformerMixin):
+        def fit(self, X, y=None):
+            return self
+            
+        def transform(self, X):
+            # Drop the specified column
+            return X.drop('customerID', axis=1)
+            
+        def get_feature_names_out(self, input_features=None):
+            # If input_features is None or not provided, return None
+            if input_features is None:
+                return None
+            # Return feature names after dropping the specified column
+            return [feature for feature in input_features if feature != 'customerID']
+    
     
     
 def make_prediction(pipeline, encoder):      
