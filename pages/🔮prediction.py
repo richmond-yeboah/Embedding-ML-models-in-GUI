@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import requests
 import os
 from io import StringIO
+from io import BytesIO
 import datetime
 
 # Configure the page
@@ -13,17 +15,26 @@ st.set_page_config(
 )
 
 st.title("Predict Customer Churn!")
+
+# Load trained machine learning model and encoder from GitHub
+github_model1_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/GradientBoosting.joblib'
+github_model2_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/SupportVector.joblib'
+encoder_url = 'https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/label_encoder.joblib'
     
     # Load models and encoder
-@st.cache_resource
+@st.cache_resource(show_spinner="Loading model")
 def load_gb_pipeline():
-    pipeline = joblib.load('https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/GradientBoosting.joblib')
+    response = requests.get(github_model1_url)
+    model_bytes = BytesIO(response.content)
+    pipeline = joblib.load(model_bytes)
     return pipeline
     
     
-@st.cache_resource
+@st.cache_resource(show_spinner="Loading model")
 def load_svc_pipeline():
-    pipeline = joblib.load('https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/SupportVector.joblib')
+    response = requests.get(github_model2_url)
+    model_bytes = BytesIO(response.content)
+    pipeline = joblib.load(model_bytes)
     return pipeline
     
     
@@ -39,7 +50,12 @@ def select_model(key):
     else:
         pipeline = load_svc_pipeline()
     
-    encoder = joblib.load('https://raw.githubusercontent.com/richmond-yeboah/Embedding-ML-models-in-GUI/main/models/label_encoder.joblib')
+    # --------- Function to load encoder from GitHub
+    def load_encoder():
+        response = requests.get(encoder_url)
+        encoder_bytes = BytesIO(response.content)
+        encoder = joblib.load(encoder_bytes)
+        return encoder
     
     return pipeline, encoder
     
