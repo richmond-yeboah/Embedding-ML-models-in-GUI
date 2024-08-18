@@ -105,7 +105,8 @@ class columnDropper(BaseEstimator, TransformerMixin):
     
     
     
-def make_prediction(pipeline, encoder):      
+def make_prediction(pipeline, encoder):
+    customerID = st.session_state['customerID']      
     gender = st.session_state['gender']
     senior_citizen = st.session_state['senior_citizen']
     partner = st.session_state['partner']
@@ -128,7 +129,7 @@ def make_prediction(pipeline, encoder):
     probability = st.session_state['probability']
     prediction = st.session_state['prediction']
     
-    data = {'gender': [gender], 'seniorcitizen': [senior_citizen], 'partner': [partner], 'dependents': [dependents],
+    data = {'customerID': [customerID], 'gender': [gender], 'seniorcitizen': [senior_citizen], 'partner': [partner], 'dependents': [dependents],
             'tenure': [tenure], 'paperlessbilling': [paperless_billing],'paymentmethod': [payment_method], 'monthlycharges': [monthly_charges],
             'totalcharges': [total_charges], 'phoneservice': [phone_service], 'multiplelines': [multiple_lines], 'internetservice': [internet_service],
         'onlinesecurity': [online_security], 'onlinebackup': [online_backup], 'deviceprotection': [device_protection], 'techsupport': [tech_support],
