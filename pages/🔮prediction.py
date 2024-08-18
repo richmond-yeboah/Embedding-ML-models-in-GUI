@@ -76,15 +76,15 @@ class TotalCharges_cleaner(BaseEstimator, TransformerMixin):
 
             # Convert the values in the Totalcharges column to a float
         X['TotalCharges'] = X['TotalCharges'].transform(lambda x: float(x))
-            return X
+        return X
             
         # Serialization methods
     def __getstate__(self):
-            # Return state to be serialized
+        # Return state to be serialized
         return {}
 
     def __setstate__(self, state):
-            # Restore state from serialized data
+        # Restore state from serialized data
         pass
             
         # Since this transformer doesn't remove or alter features, return the input features
@@ -98,14 +98,14 @@ class columnDropper(BaseEstimator, TransformerMixin):
         return self
             
     def transform(self, X):
-            # Drop the specified column
+        # Drop the specified column
         return X.drop('customerID', axis=1)
             
     def get_feature_names_out(self, input_features=None):
-            # If input_features is None or not provided, return None
+        # If input_features is None or not provided, return None
         if input_features is None:
             return None
-            # Return feature names after dropping the specified column
+        # Return feature names after dropping the specified column
         return [feature for feature in input_features if feature != 'customerID']
 
 
