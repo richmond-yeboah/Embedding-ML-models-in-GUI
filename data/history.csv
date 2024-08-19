@@ -2,3 +2,6 @@ customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleL
 1234-ABCDE,Male,1,Yes,Yes,12,Yes,Yes,DSL,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,12.0,1254.0,No,Support Vector
 ,Male,1,Yes,Yes,12,Yes,Yes,DSL,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,12.0,1254.0,No,Gradient Boosting
 ,Male,1,No,No,4,No,No,No,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,6.0,125.0,No,Gradient Boosting
+,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Gradient Boosting
+,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Gradient Boosting
+,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Support Vector
