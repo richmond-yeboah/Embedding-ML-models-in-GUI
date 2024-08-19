@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from io import BytesIO
 import requests
+from sklearn.compose import ColumnTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
 import joblib
 import imblearn
@@ -228,14 +229,14 @@ if __name__=='__main__':
         if prediction == "Yes":
             cols = st.columns([.1,.8,.1])
             with cols[1]:
-                st.markdown(f'### The customer will churn with a {round(probability[0][1],2)}% probability.')
+                st.markdown(f'### The customer will churn with a {round(probability[0][1],2)} probability.')
             cols = st.columns([.3,.4,.3])
             with cols[1]:
                 st.success('Churn status predicted successfullly🎉')
         else:
             cols = st.columns([.1,.8,.1])
             with cols[1]:
-                st.markdown(f'### The customer will not churn with a {round(probability[0][0],2)}% probability.')
+                st.markdown(f'### The customer will not churn with a {round(probability[0][0],2)} probability.')
             cols = st.columns([.3,.4,.3])
             with cols[1]:
                 st.success('Churn status predicted successfullly🎉')
