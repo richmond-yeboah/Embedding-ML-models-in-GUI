@@ -5,3 +5,5 @@ customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleL
 ,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Gradient Boosting
 ,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Gradient Boosting
 ,Female,1,Yes,No,1,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,13.0,92.0,No,Support Vector
+,Male,1,Yes,Yes,14,Yes,Yes,DSL,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,25.0,678.0,No,Support Vector
+,Male,1,Yes,Yes,14,Yes,Yes,DSL,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,25.0,63.0,No,Gradient Boosting
