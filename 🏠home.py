@@ -4,7 +4,7 @@ from login import login_user
 # Configure the page
 st.set_page_config(
     page_title='Home Page',
-    page_icon='👨‍💻',
+    page_icon='🏠',
     layout='wide',
     initial_sidebar_state='auto'
 )
