@@ -22,8 +22,8 @@ st.markdown( """ <style>
 )
 
 def dashboard_page():
-    login_user()
 
+    login_user()
     if st.session_state["authentication_status"] == True:
         # Set header for page
         st.title('Dashboard')
