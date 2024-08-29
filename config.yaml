@@ -1,12 +1,12 @@
-credentials:
-  usernames:
-    richmondyeboah:
-      email: richmondyeboah299@gmail.com
-      name: Richmond Yeboah
-      password: statistics
-cookie:
-  expiry_days: 30
-  key: some_signature_key # Must be string
-  name: some_cookie_name
+#credentials:
+  #usernames:
+    #richmondyeboah:
+      #email: richmondyeboah299@gmail.com
+      #name: Richmond Yeboah
+      #password: statistics
+#cookie:
+  #expiry_days: 30
+  #key: some_signature_key # Must be string
+  #name: some_cookie_name
 
 

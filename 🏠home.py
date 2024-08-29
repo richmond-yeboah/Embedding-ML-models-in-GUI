@@ -21,9 +21,9 @@ st.markdown( """ <style>
 
 def main():
 
-    login_user()
+    #login_user()
 
-    if st.session_state["authentication_status"] == True:
+    #if st.session_state["authentication_status"] == True:
 
         st.write(f'Welcome *{st.session_state["name"]}*')
         st.header('Customer Churn Prediction App.')

@@ -22,8 +22,8 @@ st.markdown( """ <style>
 
 def history_page():
         
-    login_user()
-    if st.session_state["authentication_status"] == True:
+    # login_user()
+    # if st.session_state["authentication_status"] == True:
         # Set header for page
         st.title('History')
 
