@@ -1,13 +1,11 @@
 credentials:
-  usernames: cactus299
-    admin: Richmond Yeboah
+  usernames:
+    richmondyeboah:
       email: richmondyeboah299@gmail.com
-      password: statistics299
-
+      name: Richmond Yeboah
+      # password should be hashed and not stored in plaintext
+      password_hash: #statistics299
 cookie:
   expiry_days: 30
-  key: some_random_key
-
-preauthorized:
-  emails: 
-    - richmondyeboah299@gmail.com
+  key: some_signature_key  # Must be a string
+  name: some_cookie_name
