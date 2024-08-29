@@ -5,7 +5,7 @@ from yaml.loader import SafeLoader
 
 def login_user():
 
-    with open('./config.yaml') as file:
+    with open('/config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
         authenticator = stauth.Authenticate(
             config['credentials'],
