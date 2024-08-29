@@ -3,8 +3,10 @@ credentials:
     richmondyeboah:
       email: richmondyeboah299@gmail.com
       name: Richmond Yeboah
-      password: statistics299
+      password: statistics
 cookie:
   expiry_days: 30
   key: some_signature_key # Must be string
   name: some_cookie_name
+
+
