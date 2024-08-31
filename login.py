@@ -19,7 +19,7 @@ def login_user():
     # Layout for login
     col1, col2, col3 = st.columns([.3, .4, .3])
     with col2:
-        name, authentication_status, username = authenticator.login('Login', 'main')
+        name, authentication_status, username = authenticator.login('Login', 'main')  # Ensure 'main' is correctly used
 
         if authentication_status:
             with st.sidebar:
