@@ -139,8 +139,7 @@ Alternatively, the web app has been hosted on Render for easy access:
 ### Prince Kwabena
 
 - GitHub: [GitHub Profile](https://github.com/richmond-yeboah)
-- X : [X Profile](https://twitter.com/pk_aduyaw)
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/richmond-yeboah)
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/richmond-yeboah-)
 
 
 
