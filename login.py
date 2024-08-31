@@ -18,10 +18,7 @@ def login_user():
         
         authenticator.login()
         
-        if st.session_state["authentication_status"] == True:
-            with st.sidebar:
-                authenticator.logout()
-        elif st.session_state["authentication_status"] is False:
+        if st.session_state["authentication_status"] == True or False:
             with st.sidebar:
                 authenticator.logout()
         elif st.session_state["authentication_status"] is None:
