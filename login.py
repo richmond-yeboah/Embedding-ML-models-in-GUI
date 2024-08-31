@@ -5,7 +5,7 @@ from yaml.loader import SafeLoader
 
 def login_user():
     # Load the configuration from config.yaml
-    with open('./config.yaml') as file:
+    with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
 
     # Initialize the authenticator with credentials and cookie settings
