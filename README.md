@@ -124,19 +124,13 @@ Run the app by executing the command below
     streamlit run 🏠home.py
 ```
 
-Login with these credentials
-```sh
-    username: richmondyeboah
-    password: $2b$12$k7CMtRRgvOMwMcyJRoJ/u.uUGG2C4ty72M4KpJjX7OJfIawJga6MK
-```
-
 Alternatively, the web app has been hosted on Render for easy access:
 
-# Click to launch the web app [Streamlit App](https://ml-embedding-in-gui.onrender.com/)
+# Click to launch the web app [Streamlit App](https://richmond-yeboah-embedding-ml-models-in-gui-home-wte32z.streamlit.app/)
 
 ## 👥 Author <a name="author"></a>
 
-### Prince Kwabena
+### Richmond Yeboah
 
 - GitHub: [GitHub Profile](https://github.com/richmond-yeboah)
 - LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/richmond-yeboah-)
