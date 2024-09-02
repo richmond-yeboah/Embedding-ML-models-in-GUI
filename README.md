@@ -140,7 +140,6 @@ Alternatively, the web app has been hosted on Render for easy access:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Include user registration option to login page**
 - **Revamp the interface and make more visually appealing**
 - **Add and organize visualization properly for meaningful insight**
   
