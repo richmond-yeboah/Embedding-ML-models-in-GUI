@@ -24,7 +24,7 @@ def main():
     #login_user()
     #if st.session_state["authentication_status"] == True:
 
-    st.write(f'Welcome *{st.session_state["name"]}*')
+    st.write(f'Welcome!')
     st.header('Customer Churn Prediction App.')
 
 
